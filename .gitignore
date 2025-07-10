@@ -1,0 +1,142 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ===========================================
+# SECURITY & SENSITIVE INFORMATION
+# ===========================================
+
+# Environment variables and configuration files
+.env
+.env.*
+!.env.example
+config.json
+secrets.json
+
+# Firebase configuration files (contain API keys)
+google-services.json
+GoogleService-Info.plist
+firebase-config.js
+firebase-adminsdk-*.json
+
+# Google Maps API configuration files
+android/app/src/main/AndroidManifest.xml
+web/index.html
+
+# API Keys and secrets
+**/apikeys.dart
+**/secrets.dart
+**/keys.dart
+**/api_keys.dart
+api-keys.json
+secrets.yaml
+secrets.yml
+
+# Local configuration files
+local.properties
+gradle.properties
+**/local.properties
+
+# Certificate and keystore files
+*.jks
+*.keystore
+*.p12
+*.key
+*.pem
+*.crt
+*.cer
+upload-keystore.jks
+android/app/upload-keystore.jks
+android/key.properties
+ios/Runner/GoogleService-Info.plist
+
+# Firebase options (if you want to exclude the generated file)
+# Uncomment the line below if you prefer to manage Firebase config manually
+# lib/firebase_options.dart
+
+# Database dumps and backups
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs that might contain sensitive information
+logs/
+*.log
+crash-*.log
+
+# Temporary files that might contain sensitive data
+tmp/
+temp/
+*.tmp
+*.temp
+
+# IDE settings that might contain paths or tokens
+.vscode/settings.json
+.vscode/launch.json
+
+# MacOS specific files that might contain metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might be created by a text editor
+*~
+*.bak
+*.swp
+*.swo
+
+# Personal notes and documentation with sensitive info
+TODO.md
+NOTES.md
+credentials.txt
+passwords.txt
+
+# Test files that might contain real data
+test_data/
+**/test_credentials.*
