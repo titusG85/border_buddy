@@ -70,7 +70,6 @@
 | `google_maps_flutter` | Interactive map integration |
 | `add_2_calendar` | Event reminders on native calendar |
 | `intl`, `flutter_localizations` | Formatting and i18n |
-| `cupertino_icons` | iOS-style UI icons |
 | `firebase_messaging`, `firebase_core` | Notifications and Firebase integration |
 | `flutter` | App framework |
 | `xml`, `http`, `html` | Parsing for RSS/event feeds |
