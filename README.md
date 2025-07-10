@@ -57,9 +57,11 @@
 | **Currency Converter** | ![Currency EN](![eng-currency](https://github.com/user-attachments/assets/9168910c-40ae-441a-a961-3635d4e07508)
 ) | ![Currency ES](![esp-currency](https://github.com/user-attachments/assets/e992cbd2-5b03-4771-b576-fdc6c173a522)
 ) |
-| **Settings** | ![Settings EN](![eng-currency](![eng-currency](https://github.com/user-attachments/assets/d833da57-0d62-4f4e-8fb8-f26549ddb767)
+| **Settings** | ![Settings EN](![eng-currency](![eng-currency](![eng-setting](https://github.com/user-attachments/assets/57ed280f-8f18-44ad-b328-33e347e0bd21)
 )
-) | ![Settings ES](![esp-setting](https://github.com/user-attachments/assets/22457ce3-6fe3-4890-ab22-d441db70fd94)
+)
+) | ![Settings ES](![esp-setting](![esp-setting](https://github.com/user-attachments/assets/3616aa9c-b4fa-4c12-a9b4-9c9fbfc7812b)
+)
 ) |
 
 ---
