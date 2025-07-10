@@ -42,12 +42,25 @@
 
 | 📱 Screen | English | Spanish |
 |----------|---------|---------|
-| **Welcome Screen** | ![English Home](https://github.com/user-attachments/assets/635a56ca-6efb-406f-ba34-73518ffd6b50) | ![Spanish Home](https://github.com/user-attachments/assets/a95c7d09-66d1-4247-8dde-a454277f9e0b) |
-| **Ports List** | ![Ports List EN](https://github.com/user-attachments/assets/4269d9ce-6834-40a3-b2e0-02d3bfd9a77a) | ![Ports List ES](https://github.com/user-attachments/assets/e3a3fc1c-09d7-4664-b6f8-362a11f652a7) |
-| **Wait Times Map** | ![Map EN](https://github.com/user-attachments/assets/6841600d-791e-49bc-aee0-65694e968721) | ![Map ES](https://github.com/user-attachments/assets/19ed896e-a529-41f1-b8a0-221933d5f82d) |
-| **Events Tab** | ![Events EN](https://github.com/user-attachments/assets/fc3a15f1-5d76-404e-a2e2-22aa55d39d7c) | ![Events ES](https://github.com/user-attachments/assets/612f807a-9cab-47cd-aecb-3b7c4fb4bdac) |
-| **Currency Converter** | ![Currency EN](https://github.com/user-attachments/assets/3413f845-c01d-4c18-8ec9-e67ff8c0a802) | ![Currency ES](https://github.com/user-attachments/assets/8578ea54-2e70-495a-8c5e-12dcbff3be29) |
-| **Settings** | ![Settings EN](https://github.com/user-attachments/assets/9df29f16-9a6d-442a-892e-dcb87c8b107a) | ![Settings ES](https://github.com/user-attachments/assets/18b4dae5-984b-4598-af18-a768c99f2e45) |
+| **Welcome Screen** | ![English Home](![bb-home 7 51 41 PM](https://github.com/user-attachments/assets/38fd3b3a-5855-462d-81d9-714a96ec2d51)
+) | ![Spanish Home](![image](https://github.com/user-attachments/assets/016a9b9b-5a8a-41d6-b83a-32eaa4b68ec6)
+) |
+| **Ports List** | ![Ports List EN](![eng-port-list](https://github.com/user-attachments/assets/6c917e1b-c45d-4537-99ac-4f465dca48af)
+) | ![Ports List ES](![esp-list](https://github.com/user-attachments/assets/19d0308e-e5bf-4fb5-afa4-4701614d7cee)
+) |
+| **Wait Times Map** | ![Map EN](![eng-map](https://github.com/user-attachments/assets/8c683c14-02dc-4398-8646-9bd80356b1ba)
+) | ![Map ES](![esp-maps](https://github.com/user-attachments/assets/096eaae7-6006-4171-9774-11242193e47b)
+) |
+| **Events Tab** | ![Events EN](![eng-event](https://github.com/user-attachments/assets/4ad8ef94-4027-4646-8398-bc43f0514467)
+) | ![Events ES](![esp-events](https://github.com/user-attachments/assets/42c7943d-a986-4c20-b70c-3b7b21ceb165)
+) |
+| **Currency Converter** | ![Currency EN](![eng-currency](https://github.com/user-attachments/assets/9168910c-40ae-441a-a961-3635d4e07508)
+) | ![Currency ES](![esp-currency](https://github.com/user-attachments/assets/e992cbd2-5b03-4771-b576-fdc6c173a522)
+) |
+| **Settings** | ![Settings EN](![eng-currency](![eng-currency](https://github.com/user-attachments/assets/d833da57-0d62-4f4e-8fb8-f26549ddb767)
+)
+) | ![Settings ES](![esp-setting](https://github.com/user-attachments/assets/22457ce3-6fe3-4890-ab22-d441db70fd94)
+) |
 
 ---
 
