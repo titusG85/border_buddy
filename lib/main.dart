@@ -2,6 +2,7 @@ import 'package:border_buddy/mainFunctions/main_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'utils/app_localizations.dart';
+import 'utils/text_styles.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -38,7 +39,7 @@ void main() async {
 
     if (message.data.containsKey('events')) {
       // Optionally handle the events data
-      print('Foreground notification data: ${message.data['events']}');
+      debugPrint('Foreground notification data: ${message.data['events']}');
     }
   });
 
@@ -46,7 +47,11 @@ void main() async {
     // Handle notification tap
     if (message.data['screen'] == 'events_screen') {
       final eventsJson = message.data['events'];
-      final List<dynamic> events = json.decode(eventsJson);
+      if (eventsJson != null) {
+        final List<dynamic> events = json.decode(eventsJson);
+        // TODO: Navigate to events screen with the provided events data
+        debugPrint('Opened app from notification with events: $events');
+      }
     }
   });
 
@@ -96,6 +101,20 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 180, 104, 5)),
         useMaterial3: true,
+        textTheme: TextTheme(
+          displayLarge: AppTextStyles.displayLarge,
+          displayMedium: AppTextStyles.displayMedium,
+          headlineLarge: AppTextStyles.screenTitle,
+          headlineMedium: AppTextStyles.sectionHeader,
+          titleLarge: AppTextStyles.cardTitle,
+          titleMedium: AppTextStyles.appBarTitle,
+          bodyLarge: AppTextStyles.bodyText,
+          bodyMedium: AppTextStyles.subtitleText,
+          labelLarge: AppTextStyles.buttonText,
+        ),
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: AppTextStyles.appBarTitle,
+        ),
       ),
       locale: _locale, // Use the updated locale
       supportedLocales: const [

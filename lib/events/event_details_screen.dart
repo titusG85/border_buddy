@@ -1,6 +1,7 @@
 import 'package:border_buddy/events/event_model.dart';
 import 'package:flutter/material.dart';
 import '../utils/app_localizations.dart'; // Import localization helper
+import '../utils/text_styles.dart';
 
 class EventDetailsScreen extends StatelessWidget {
   final Event event;
@@ -15,7 +16,7 @@ class EventDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           event.title,
-          style: const TextStyle(fontFamily: 'Gravitas'),
+          style: AppTextStyles.appBarTitle,
         ),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
@@ -37,25 +38,22 @@ class EventDetailsScreen extends StatelessWidget {
             const SizedBox(height: 16),
             Text(
               event.title,
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppTextStyles.responsiveText(context, AppTextStyles.screenTitle),
             ),
             const SizedBox(height: 8),
             Text(
               '${localizations.translate('event_date')}: ${event.date}', // Localized "Date"
-              style: const TextStyle(fontSize: 16),
+              style: AppTextStyles.responsiveText(context, AppTextStyles.bodyText),
             ),
             const SizedBox(height: 8),
             Text(
               '${localizations.translate('event_location')}: ${event.location}', // Localized "Location"
-              style: const TextStyle(fontSize: 16),
+              style: AppTextStyles.responsiveText(context, AppTextStyles.bodyText),
             ),
             const SizedBox(height: 16),
             Text(
               event.description,
-              style: const TextStyle(fontSize: 16),
+              style: AppTextStyles.responsiveText(context, AppTextStyles.bodyText),
             ),
             const SizedBox(height: 16),
           ],

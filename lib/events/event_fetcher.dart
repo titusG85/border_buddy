@@ -1,4 +1,5 @@
 import 'event_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:html/parser.dart' as parse;
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart'; 
@@ -8,17 +9,17 @@ abstract class EventFetcher {
     final url = 'https://visitelpaso.com/events';
     final response = await http.get(Uri.parse(url));
 
-    print('Response status: ${response.statusCode}');
+    debugPrint('Response status: ${response.statusCode}');
     if (response.statusCode != 200) {
       throw Exception('Failed to load events: ${response.statusCode}');
     }
 
-    print('Response body: ${response.body}');
+    debugPrint('Response body: ${response.body}');
     final document = parse.parse(response.body);
     final eventCards = document.querySelectorAll('.event-card');
 
     if (eventCards.isEmpty) {
-      print('No event cards found.');
+      debugPrint('No event cards found.');
       return [];
     }
 
@@ -42,7 +43,7 @@ abstract class EventFetcher {
         final parsedDateTime = dateFormat.parse(rawDate);
         parsedDate = DateFormat('yyyy-MM-dd').format(parsedDateTime); // Store in ISO 8601 format
       } catch (e) {
-        print('Error parsing date: $e');
+        debugPrint('Error parsing date: $e');
       }
 
       final event = Event(

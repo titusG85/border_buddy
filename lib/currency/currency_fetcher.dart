@@ -1,4 +1,5 @@
 import 'dart:convert'; // For JSON decoding
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 Future<double?> fetchConversionRate() async {

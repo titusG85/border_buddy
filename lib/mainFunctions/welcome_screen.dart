@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../utils/app_localizations.dart'; // Import the localization helper
+import '../utils/app_localizations.dart';
+import '../utils/text_styles.dart'; // Import the localization helper
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -56,11 +57,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   child: Text(
                     localizations.translate('welcome_message'), // Use the localized key
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 200,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 3, 1, 1),
-                      fontFamily: 'Gravitas',
+                    style: AppTextStyles.responsiveText(
+                      context,
+                      AppTextStyles.welcomeText,
+                      scaleFactor: 1.2,
                     ),
                     softWrap: true,
                     overflow: TextOverflow.ellipsis,

@@ -1,21 +1,20 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../ports/rss_fetcher.dart';
 import '../ports/dialog_util.dart';
 import '../utils/app_localizations.dart'; // Import localization helper
+import '../utils/text_styles.dart';
 import 'dart:ui' as ui;
 import 'dart:typed_data';
 
 class PortNodeService { 
   Future<Set<Marker>> fetchPortMarkers(BuildContext context) async {
+    // Get the localization instance before async operations
+    final localizations = AppLocalizations.of(context)!;
+    
     final rssFetcher = RssFetcher();
     final ports = await rssFetcher.fetchPortNodes();
     final Set<Marker> markers = {};
-
-    // Get the localization instance
-    final localizations = AppLocalizations.of(context)!;
 
     for (var port in ports) {
       try {
@@ -72,10 +71,10 @@ Future<BitmapDescriptor> createCustomMarkerIcon(String waitTime) async {
   final textPainter = TextPainter(
     text: TextSpan(
       text: waitTime,
-      style: const TextStyle(
-        fontSize: 30,
-        color: Colors.white,
+      style: AppTextStyles.mapMarkerText.copyWith(
+        fontSize: 14,
         fontWeight: FontWeight.bold,
+        color: Colors.white,
       ),
     ),
     textDirection: TextDirection.ltr,

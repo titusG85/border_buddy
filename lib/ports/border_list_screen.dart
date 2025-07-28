@@ -1,10 +1,9 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
 import 'port_node.dart';
 import 'rss_fetcher.dart';
 import 'dialog_util.dart';
 import '../utils/app_localizations.dart'; // Import localization helper
+import '../utils/text_styles.dart';
 
 class BorderList extends StatefulWidget {
   const BorderList({super.key});
@@ -42,7 +41,7 @@ class _BorderListState extends State<BorderList> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(
           localizations.translate('list_of_ports'), // Use localized key
-          style: const TextStyle(fontFamily: 'Gravitas'),
+          style: AppTextStyles.appBarTitle,
         ),
       ),
       body: Stack(
@@ -58,10 +57,7 @@ class _BorderListState extends State<BorderList> {
                   child: Text(
                     '${localizations.translate('last_updated')}: $lastUpdatedTime', // Localized text
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontStyle: FontStyle.italic,
-                    ),
+                    style: AppTextStyles.responsiveText(context, AppTextStyles.subtitleText),
                   ),
                 ),
               // The scrollable ListView
@@ -95,7 +91,7 @@ class _BorderListState extends State<BorderList> {
                             child: ListTile(
                               title: Text(
                                 localizedTitle,
-                                style: const TextStyle(fontWeight: FontWeight.bold),
+                                style: AppTextStyles.responsiveText(context, AppTextStyles.cardTitle),
                               ),
                               subtitle: Text(
                                 "${localizations.translate('general_lanes')}: ${portNode.generalLanes}\n"

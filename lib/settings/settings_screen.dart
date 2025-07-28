@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/app_localizations.dart'; // Import localization helper
+import '../utils/text_styles.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -38,7 +39,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(
         title: Text(
           localizations.translate('settings'), // Localized "Settings"
-          style: const TextStyle(fontFamily: 'Gravitas'), // Apply "Gravitas" font
+          style: AppTextStyles.appBarTitle,
         ),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary, // Apply color scheme
       ),
@@ -49,7 +50,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           children: [
             Text(
               localizations.translate('choose_language'), // Localized "Choose Language"
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: AppTextStyles.responsiveText(context, AppTextStyles.sectionHeader),
             ),
             const SizedBox(height: 16),
             ListTile(

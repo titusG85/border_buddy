@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'map_screen_controller.dart';
 import '../utils/app_localizations.dart'; // Import localization helper
+import '../utils/text_styles.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
@@ -35,7 +36,7 @@ class _MapScreenState extends State<MapScreen> {
       appBar: AppBar(
         title: Text(
           localizations.translate('ports_of_entry_map'), // Use localized key
-          style: const TextStyle(fontFamily: 'Gravitas'),
+          style: AppTextStyles.appBarTitle,
         ),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),

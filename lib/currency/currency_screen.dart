@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import '../utils/app_localizations.dart'; // Import localization helper
+import '../utils/text_styles.dart';
 import 'currency_controller.dart';
 
 class CurrencyScreen extends StatefulWidget {
   const CurrencyScreen({super.key});
 
   @override
-  _CurrencyScreenState createState() => _CurrencyScreenState();
+  CurrencyScreenState createState() => CurrencyScreenState();
 }
 
-class _CurrencyScreenState extends State<CurrencyScreen> {
+class CurrencyScreenState extends State<CurrencyScreen> {
   final CurrencyController _controller = CurrencyController(); // Use the controller
   String _usdInput = '';
   double? _convertedAmount;
@@ -59,7 +60,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
       appBar: AppBar(
         title: Text(
           localizations.translate('currency_converter'), // Localized "Currency Converter"
-          style: const TextStyle(fontFamily: 'Gravitas'),
+          style: AppTextStyles.appBarTitle,
         ),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
@@ -79,7 +80,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
                     ? localizations.translate('enter_amount').replaceFirst(
                         '{currency}', _isUsdToPeso ? 'USD' : 'Pesos') // Localized "Enter amount in"
                     : '\$$_usdInput',
-                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: AppTextStyles.responsiveText(context, AppTextStyles.displayMedium),
                 textAlign: TextAlign.right,
               ),
             ),
@@ -96,7 +97,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
               Text(
                 '${localizations.translate('amount_in').replaceFirst(
                     '{currency}', _isUsdToPeso ? 'Pesos' : 'USD')}: ${_convertedAmount!.toStringAsFixed(2)}', // Localized "Amount in"
-                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: AppTextStyles.responsiveText(context, AppTextStyles.sectionHeader),
               ),
             const SizedBox(height: 16),
             ElevatedButton(
@@ -153,7 +154,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
       ),
       child: Text(
         value,
-        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        style: AppTextStyles.responsiveText(context, AppTextStyles.keypadText),
       ),
     );
   }

@@ -1,10 +1,11 @@
 import 'package:add_2_calendar/add_2_calendar.dart' as add2calendar;
 import 'package:border_buddy/events/event_details_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; 
+import 'package:intl/intl.dart';
 import '../events/event_fetcher.dart';
 import '../events/event_model.dart';
-import '../utils/app_localizations.dart'; 
+import '../utils/app_localizations.dart';
+import '../utils/text_styles.dart'; 
 
 class EventsScreen extends StatefulWidget {
   const EventsScreen({super.key});
@@ -60,7 +61,7 @@ class _EventsScreenState extends State<EventsScreen> {
 
       add2calendar.Add2Calendar.addEvent2Cal(calendarEvent);
     } catch (e) {
-      print('Error parsing date: $e');
+      debugPrint('Error parsing date: $e');
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(AppLocalizations.of(context)!.translate('failed_to_add_event'))), // Localized error message
       );
@@ -73,7 +74,7 @@ class _EventsScreenState extends State<EventsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(localizations.translate('events'), style: const TextStyle(fontFamily: 'Gravitas')), // Localized "Events"
+        title: Text(localizations.translate('events'), style: AppTextStyles.appBarTitle), // Localized "Events"
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Column(
@@ -95,7 +96,7 @@ class _EventsScreenState extends State<EventsScreen> {
                     value: badge,
                     child: Text(badge),
                   );
-                }).toList(),
+                }),
               ],
             ),
           ),
@@ -138,14 +139,11 @@ class _EventsScreenState extends State<EventsScreen> {
                             : const Icon(Icons.image, size: 50),
                         title: Text(
                           event.title,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: AppTextStyles.responsiveText(context, AppTextStyles.cardTitle),
                         ),
                         subtitle: Text(
                           '${localizations.translate('event_date')}: ${event.date}\n${localizations.translate('event_location')}: ${event.location}', // Localized "Date" and "Location"
-                          style: const TextStyle(fontSize: 14),
+                          style: AppTextStyles.responsiveText(context, AppTextStyles.cardSubtitle),
                         ),
                         trailing: IconButton(
                           icon: const Icon(Icons.calendar_today),

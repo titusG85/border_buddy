@@ -11,8 +11,8 @@ class PortNode {
   final String sentriLanes;
   final String readyLanes;
   final String borderNotice;
-  double _latitude = 0.0;
-  double _longitude = 0.0;
+  double latitude = 0.0;
+  double longitude = 0.0;
 
   PortNode({
     required this.titleKey, // Updated field name
@@ -23,10 +23,9 @@ class PortNode {
     required this.sentriLanes,
     required this.readyLanes,
     required this.borderNotice,
-    required double latitude,
-    required double longitude,
-  })  : _latitude = latitude,
-        _longitude = longitude;
+    required this.latitude,
+    required this.longitude,
+  });
 
   factory PortNode.fromXmlElement(XmlElement element) {
     // Map raw titles to localization keys
@@ -48,17 +47,6 @@ class PortNode {
       latitude: 0.0,
       longitude: 0.0,
     );
-  }
-
-  double get latitude => _latitude;
-  double get longitude => _longitude;
-
-  set latitude(double value) {
-    _latitude = value;
-  }
-
-  set longitude(double value) {
-    _longitude = value;
   }
 
   static Map<String, String> _parseDescription(String descriptionXml) {
